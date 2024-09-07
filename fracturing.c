@@ -13,6 +13,7 @@
 //********************************************************
 
 // gcc /workspaces/fall-2024-cop-3223-assignment1/fracturing.c && ./a.out
+// gcc /workspaces/fall-2024-cop-3223-assignment1/fracturing.c && ./a.exe
 //printf("");
 
 // Includes libraries required for code to function
@@ -64,26 +65,57 @@ double calculateDistance()
     int y2;
     
     // Gets user input on X-Y coordinates
-    printf("Enter the x-coordinate of Point #1. ");
+    // In accordance with the rubric request of only 3 lines outputted, program does not ask user for their input and instead just assumes the user knows what they're doing.
     scanf("%d", &x1);
-    printf("Enter the y-coordinate of Point #1. ");
     scanf("%d", &y1);
-    printf("Enter the x-coordinate of Point #2. ");
     scanf("%d", &x2);
-    printf("Enter the y-coordinate of Point #2. ");
     scanf("%d", &y2);
 
     // Informs user of input
     printf("Point #1 entered: x1 = %d; y1 = %d \n", x1, y1);
     printf("Point #2 entered: x2 = %d; y2 = %d \n", x2, y2);
 
-    // Calculates and prints distance
+    // Declares variables & calculates and prints distance
     double distance = sqrt(pow((x2-x1),2)+pow((y2-y1),2));
     printf("The distance between the two points is %.4f \n", distance); 
 
     // Returns distance
     return distance;
 } // calculateDistance
+
+//********************************************************
+// double calculateDistanceFunc()
+//
+// Purpose:         Finds distance between two user inputted coordinates on an X-Y plane. Meant to be used with other functions while still abiding by rubric requirements.
+// Output:          Prints questions asking for coordinates, coordinate confirmation, and distance to the terminal.
+// Precondition:    None.   
+// Postcondition:   
+//********************************************************
+double calculateDistanceFunc()
+{
+    // Declares variables to store X-Y coordinate values
+    int x1;
+    int x2;
+    int y1;
+    int y2;
+    
+    // Gets user input on X-Y coordinates
+    // In accordance with the rubric request of only 3 lines outputted, program does not ask user for their input and just assumes the user knows what they're doing.
+    scanf("%d", &x1);
+    scanf("%d", &y1);
+    scanf("%d", &x2);
+    scanf("%d", &y2);
+
+    // Informs user of input
+    printf("Point #1 entered: x1 = %d; y1 = %d \n", x1, y1);
+    printf("Point #2 entered: x2 = %d; y2 = %d \n", x2, y2);
+
+    // Declares variables & calculates distance
+    double distance = sqrt(pow((x2-x1),2)+pow((y2-y1),2));
+
+    // Returns distance
+    return distance;
+} // calculateDistanceFunc
 
 //********************************************************
 // double calculatePerimeter()
@@ -95,35 +127,14 @@ double calculateDistance()
 //********************************************************
 double calculatePerimeter()
 {
-    // Declares variables to store X-Y coordinate values
-    int x1;
-    int x2;
-    int y1;
-    int y2;
-    
-    // Gets user input on X-Y coordinates
-    printf("Enter the x-coordinate of Point #1. ");
-    scanf("%d", &x1);
-    printf("Enter the y-coordinate of Point #1. ");
-    scanf("%d", &y1);
-    printf("Enter the x-coordinate of Point #2. ");
-    scanf("%d", &x2);
-    printf("Enter the y-coordinate of Point #2. ");
-    scanf("%d", &y2);
-
-    // Informs user of input
-    printf("Point #1 entered: x1 = %d; y1 = %d \n", x1, y1);
-    printf("Point #2 entered: x2 = %d; y2 = %d \n", x2, y2);
-    
-    // Calculates and prints perimeter
-    double distance = sqrt(pow((x2-x1),2)+pow((y2-y1),2));
+    // Declares variables & calculates and prints perimeter
+    double distance = calculateDistanceFunc();
     double perimeter = 2*3.14159265*(distance/2);
     printf("The perimeter of the city encompassed by your request is %.4f \n", perimeter);
 
-    // Returns 
-    return 1.0;
+    // Returns how easy I thought it was to implement this function on a 1.0-5.0 scale
+    return 1.1;
 
-    //Return: A double indicating how difficult you found to do this function on a scale of 1.0 through 5.0 where 1 is easy and 5 is hard
 } // calculatePerimeter
 
 //********************************************************
@@ -136,33 +147,13 @@ double calculatePerimeter()
 //********************************************************
 double calculateArea()
 {
-    // Declares variables to store X-Y coordinate values
-    int x1;
-    int x2;
-    int y1;
-    int y2;
-    
-    // Gets user input on X-Y coordinates
-    printf("Enter the x-coordinate of Point #1. ");
-    scanf("%d", &x1);
-    printf("Enter the y-coordinate of Point #1. ");
-    scanf("%d", &y1);
-    printf("Enter the x-coordinate of Point #2. ");
-    scanf("%d", &x2);
-    printf("Enter the y-coordinate of Point #2. ");
-    scanf("%d", &y2);
-
-    // Informs user of input
-    printf("Point #1 entered: x1 = %d; y1 = %d \n", x1, y1);
-    printf("Point #2 entered: x2 = %d; y2 = %d \n", x2, y2);
-
-    // Calculates and prints area
-    double distance = sqrt(pow((x2-x1),2)+pow((y2-y1),2));
+    // Declares variables & calculates and prints area
+    double distance = calculateDistanceFunc();
     double area = 3.14159265*pow((distance/2),2);
     printf("The area of the city encompassed by your request is %.4f \n", area);
 
-    // Returns 
-    return 0.3;
+    // Returns how easy I thought it was to implement this function on a 1.0-5.0 scale
+    return 1.2;
 } // calculateArea
 
 //********************************************************
@@ -175,32 +166,12 @@ double calculateArea()
 //********************************************************
 double calculateWidth()
 {
-    // Declares variables to store X-Y coordinate values
-    int x1;
-    int x2;
-    int y1;
-    int y2;
-    
-    // Gets user input on X-Y coordinates
-    printf("Enter the x-coordinate of Point #1. ");
-    scanf("%d", &x1);
-    printf("Enter the y-coordinate of Point #1. ");
-    scanf("%d", &y1);
-    printf("Enter the x-coordinate of Point #2. ");
-    scanf("%d", &x2);
-    printf("Enter the y-coordinate of Point #2. ");
-    scanf("%d", &y2);
-
-    // Informs user of input
-    printf("Point #1 entered: x1 = %d; y1 = %d \n", x1, y1);
-    printf("Point #2 entered: x2 = %d; y2 = %d \n", x2, y2);
-
-    // Calculates and prints width
-    double width = sqrt(pow((x2-x1),2)+pow((y2-y1),2));
+    // Declares variables & calculates and prints width
+    double width = calculateDistanceFunc();
     printf("The width of the city encompassed by your request is %.4f \n", width);
 
-    // Returns 
-    return 0.4;
+    // Returns how easy I thought it was to implement this function on a 1.0-5.0 scale
+    return 1.0;
 } // calculateWidth
 
 //********************************************************
@@ -213,31 +184,11 @@ double calculateWidth()
 //********************************************************
 double calculateHeight() 
 {
-    // Declares variables to store X-Y coordinate values
-    int x1;
-    int x2;
-    int y1;
-    int y2;
-    
-    // Gets user input on X-Y coordinates
-    printf("Enter the x-coordinate of Point #1. ");
-    scanf("%d", &x1);
-    printf("Enter the y-coordinate of Point #1. ");
-    scanf("%d", &y1);
-    printf("Enter the x-coordinate of Point #2. ");
-    scanf("%d", &x2);
-    printf("Enter the y-coordinate of Point #2. ");
-    scanf("%d", &y2);
-
-    // Informs user of input
-    printf("Point #1 entered: x1 = %d; y1 = %d \n", x1, y1);
-    printf("Point #2 entered: x2 = %d; y2 = %d \n", x2, y2);
-
-    // Calculates and prints height
-    double distance = sqrt(pow((x2-x1),2)+pow((y2-y1),2));
+    // Declares variables & calculates and prints height
+    double distance = calculateDistanceFunc();
     double height = distance/2;
     printf("The height of the city encompassed by your request is %.4f \n", height);
 
-    // Returns 
-    return 0.5;
+    // Returns how easy I thought it was to implement this function on a 1.0-5.0 scale
+    return 1.0;
 } // calculateHeight
