@@ -9,12 +9,8 @@
 // The main purpose of this assignment is to practice functions and fracturing.
 // Input: 2 X-Y coordinates.
 //
-// Output: Distance between points, sphere area, sphere circumfrence, sphere radius
+// Output: Distance between points; sphere: area, perimeter, radius. height, width
 //********************************************************
-
-// gcc /workspaces/fall-2024-cop-3223-assignment1/fracturing.c && ./a.out
-// gcc /workspaces/fall-2024-cop-3223-assignment1/fracturing.c && ./a.exe
-//printf("");
 
 // Includes libraries required for code to function
 #include <stdio.h>
