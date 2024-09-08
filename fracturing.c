@@ -17,6 +17,9 @@
 #include <stdlib.h>
 #include <math.h>
 
+// Defines PI in accordance with rubric requirement 5.1
+#define PI 3.14159
+
 // Defines functions
 double calculateDistance();
 double calculatePerimeter();
@@ -125,7 +128,7 @@ double calculatePerimeter()
 {
     // Declares variables & calculates and prints perimeter
     double distance = calculateDistanceFunc();
-    double perimeter = 2*3.14159265*(distance/2);
+    double perimeter = 2*PI*(distance/2);
     printf("The perimeter of the city encompassed by your request is %.4f \n", perimeter);
 
     // Returns how easy I thought it was to implement this function on a 1.0-5.0 scale
@@ -145,7 +148,7 @@ double calculateArea()
 {
     // Declares variables & calculates and prints area
     double distance = calculateDistanceFunc();
-    double area = 3.14159265*pow((distance/2),2);
+    double area = PI*pow((distance/2),2);
     printf("The area of the city encompassed by your request is %.4f \n", area);
 
     // Returns how easy I thought it was to implement this function on a 1.0-5.0 scale
